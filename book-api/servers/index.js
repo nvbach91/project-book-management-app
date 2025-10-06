@@ -4,7 +4,6 @@ const port = 3000;
 app.use(express.json()); 
 
 const usersRoutes = require('../routes/api/v1/users');
-
 app.use('/api/v1/users', usersRoutes);
 
 app.get('/', (req, res) => {
