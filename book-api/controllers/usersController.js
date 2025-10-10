@@ -33,9 +33,9 @@ exports.createUser = (req, res) => {
   }
   bcrypt.hash(password, 10, (err, password_hash) => {
     if (err) {
-      return res.status(500).json({ message: 'message hashing password' });
+      return res.status(500).json({ message: 'Error hashing password' });
     }
-    const sql = 'INSERT INTO users (email, display_name, password_hash, created_at, updated_at) VALUES (?, ?, ?, NOW(), NOW())';
+    const sql = 'INSERT INTO users (email, display_name, password_hash) VALUES (?, ?, ?)';
     db.query(sql, [email, display_name, password_hash], (err, result) => {
       if (err) {
         if (err.code === 'ER_DUP_ENTRY') {
@@ -51,7 +51,7 @@ exports.createUser = (req, res) => {
 exports.updateUser = (req, res) => {
   const userId = req.params.id;
   const { display_name } = req.body;
-  const sql = 'UPDATE users SET display_name=?, updated_at=NOW() WHERE user_id=?';
+  const sql = 'UPDATE users SET display_name=? WHERE user_id=?';
   db.query(sql, [display_name, userId], (err, result) => {
     if (err) {
       return res.status(500).json({ message: err.message });
