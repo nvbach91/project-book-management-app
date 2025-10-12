@@ -11,6 +11,6 @@ const pool = mysql.createPool({
   maxIdle: 10,
   idleTimeout: 60000,
   queueLimit: 0
-})
+});
 
 module.exports = pool;
