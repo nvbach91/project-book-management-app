@@ -14,7 +14,7 @@ cd project-book-management-app/book-api
 ```
 2️⃣ Install dependencies
 ```
-npm install
+yarn install
 ```
 3️⃣ Configure environment variables
 
@@ -49,7 +49,7 @@ Execute the script to create all tables and sample data
 <h2>Run the server</h2>
 
 ```server
-node servers/index.js
+yarn start
 ``` 
 Expected output:
 
@@ -61,7 +61,7 @@ Server is running at http://localhost:3000
 Integration tests use Jest and Supertest.
 
 ```
-npm test
+yarn test
 ```
 
 <h2>Linting</h2>
@@ -69,5 +69,6 @@ npm test
 Run ESLint to check for code style and syntax issues:
 
 ```
-npx eslint .
+yarn eslint .
 ```
+
