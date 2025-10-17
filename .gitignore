@@ -2,6 +2,7 @@ book-api/node_modules/
 book-api/.env
 book-api/.env.test
 book-api/package-lock.json
+coverage/
 
 # Logs
 npm-debug.log*

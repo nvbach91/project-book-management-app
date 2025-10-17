@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node servers/index.js",
-    "test": "jest --detectOpenHandles --forceExit",
+    "test": "jest --detectOpenHandles --forceExit --coverage",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -23,5 +23,8 @@
     "globals": "^16.4.0",
     "jest": "^30.2.0",
     "supertest": "^7.1.4"
+  },
+  "jest": {
+  "coveragePathIgnorePatterns": ["/servers/index.js"]
   }
 }
