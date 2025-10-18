@@ -25,6 +25,6 @@
     "supertest": "^7.1.4"
   },
   "jest": {
-  "coveragePathIgnorePatterns": ["/servers/index.js"]
+    "coveragePathIgnorePatterns": ["/servers/index.js", "/config/db.js"]
   }
 }
